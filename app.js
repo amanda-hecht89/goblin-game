@@ -1,4 +1,6 @@
 // import functions and grab DOM elements
+import { renderElf } from './utils';
+
 const defeatedNumEl = document.querySelector('#defeated-number');
 const playerHpEl = document.querySelector('#player-hp');
 const playerImgEl = document.querySelector('#player-img');
@@ -32,6 +34,7 @@ function displayElf() {
     for (let elf of elves) {
         const elfEl = renderElf(elf);
     //elf add event listener
+
     }
 
 }
