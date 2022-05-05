@@ -31,7 +31,6 @@ function displayElf() {
     elfListEl.textContent = '';
     for (let elf of elves) {
         const elfEl = renderElf(elf);
-
     //elf add event listener
     }
 
