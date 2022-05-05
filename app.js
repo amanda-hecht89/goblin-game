@@ -13,6 +13,26 @@ let elves = [
 ];
 
 // set event listeners 
-  // get user input
-  // use user input to update state 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // get user input
+    const data = new FormData(form);
+    const elfName = data.get('elf-name');
+    // use user input to update state 
+    const newElf = {
+        name: elfName,
+        hp: Math.ceil(Math.random() * 5)
+    };
+    elves.push(newElf);
+    displayElf();
+});
   // update DOM to reflect the new state
+function displayElf() {
+    elfListEl.textContent = '';
+    for (let elf of elves) {
+        const elfEl = renderElf(elf);
+
+    //elf add event listener
+    }
+
+}
