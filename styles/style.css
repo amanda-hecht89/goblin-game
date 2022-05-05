@@ -89,3 +89,29 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+
+.player-stat {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.player p {
+    border: 4px dotted blue;
+}
+
+.player {
+    border: 10px solid peru;
+}
+
+.elf-hp {
+    border: 3px dotted red;
+}
+
+
+
+
+
+
+
+
