@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { renderElf } from './utils';
+import { renderElf } from './utils.js';
 
 const defeatedNumEl = document.querySelector('#defeated-number');
 const playerHpEl = document.querySelector('#player-hp');
@@ -33,8 +33,16 @@ function displayElf() {
     elfListEl.textContent = '';
     for (let elf of elves) {
         const elfEl = renderElf(elf);
-    //elf add event listener
+        //add eventlistener here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        elfEl.addEventListener('click', () => {
+            elfClickHandler(elf);
+        });
+        //clickhandler HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        elfListEl.append(elfEl);
 
     }
-
 }
+
+displayElf();
+
+//functdion clickhandler!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

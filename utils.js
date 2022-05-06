@@ -8,7 +8,7 @@ export function renderElf(elfData) {
 
     nameEl.textContent = elfData.name;
     hpEl.textContent = elfData.hp < 0 ? 0 : elfData.hp;
-    faceEl.textContent = elfData.hp > 0 ? '' : '';
+    faceEl.textContent = elfData.hp > 0 ? '🎄' : '🪦';
 
     if (elfData.hp < 0) {
         elvesEl.classList.add('dead');
