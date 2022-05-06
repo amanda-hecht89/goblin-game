@@ -39,10 +39,39 @@ function displayElf() {
         });
         //clickhandler HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         elfListEl.append(elfEl);
-
     }
 }
 
 displayElf();
+//function clickhandler!!!!!!!!!!
+function elfClickHandler(elf) {
+    if (elf.hp === 0) return;
+    if (playerHp === 0) return;
 
-//functdion clickhandler!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    const playerHit = Math.random();
+    if (playerHit < 1) {
+        elf.hp--;
+        playerHp++;
+        displayElf();
+        alert(`You Hit ${elf.name}!!`);
+        if (elf.hp === 0) {
+          defeatedElfCount++;
+          defeatedNumEl.textContent = defeatedElfCount;
+        }
+    } else {
+      alert(`you Missed ${elf.name}!!`);
+    }
+    const elfHit = Math.random();
+    if (elfHit < 1) {
+      playerHp--;
+      elf.hp++;
+      playerHpEl.textContent = playerHp;
+      alert(`${elf.name} hit you!`);
+      if (playerHp === 0) {
+        alert('Game Over');
+        playerImgEl.classList.add('game-over');
+      }
+    } else {
+      alert(`${elf.name} tried to hit you and missed!!!`);
+    }
+} 

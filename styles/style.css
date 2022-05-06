@@ -7,8 +7,8 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
     background-color: var(--color2);
-    background-image: url(../assets/Christmas-town.png);
-    color: white
+    --!background-image: url(../assets/Christmas-town.png);
+    --!color: white
     
 }
 
@@ -78,21 +78,16 @@ footer {
 }
 
 .player p {
-    border: 4px dotted blue;
+    border: 4px dotted rgb(0, 0, 1);
 }
 
 .player {
-    border: 10px solid peru;
 }
 
 .elf-hp {
     border: 3px dotted red;
 }
 
-body {
-    background-image: ;
-
-}
 
 
 
