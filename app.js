@@ -8,7 +8,7 @@ const form = document.querySelector('form');
 const elfListEl = document.querySelector('.elves');
 // let state
 let defeatedElfCount = 0;
-let playerHp = 2;
+let playerHp = 10;
 let elves = [
     { name: 'Jingles', hp: 1 },
     { name: 'Captain HappyDance', hp: 5 },
